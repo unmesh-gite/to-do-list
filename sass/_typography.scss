@@ -1,0 +1,45 @@
+// Typography
+@mixin headline($color,$weight){
+  font-size:40pt;
+  letter-spacing: -1.5;
+  color: $color;
+  font-weight: $weight;
+  @content;
+}
+@mixin title($color,$weight){
+  font-size:30pt;
+  letter-spacing: -0.5;
+  color: $color;
+  font-weight: $weight;
+  @content;
+}
+@mixin subheader($color,$weight){
+  font-size:20pt;
+  letter-spacing: 0;
+  color: $color;
+  font-weight: $weight;
+  @content;
+}
+@mixin large-body($color,$weight){
+  font-size:14pt;
+  letter-spacing: 0.5;
+  color: $color;
+  font-weight: $weight;
+  @content;
+}
+
+@mixin small-body($color,$weight){
+  font-size:12pt;
+  letter-spacing: 0.25;
+  color: $color;
+  font-weight: $weight;
+  @content;
+}
+@mixin button($color,$weight){
+  font-size:10pt;
+  letter-spacing: 1.25;
+  color: $color;
+  font-weight: $weight;
+  @content;
+}
+

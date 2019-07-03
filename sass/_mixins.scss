@@ -1,0 +1,50 @@
+
+@mixin flex($justify-c,$align-i){
+  display:flex;
+  justify-content: $justify-c;
+  align-items: $align-i;
+  @content;
+}
+
+// buttons
+
+@mixin big-cta($bg-color,$color){
+  padding:15px 10px;
+  background-color: $bg-color;
+  color: $color;
+  cursor:pointer;
+          &:hover{
+            box-shadow:2px 2px 30px transparentize($bg-color, 0.4);
+          }
+}
+
+// Responsive styles
+
+@mixin only-mobile{
+  @media screen and (max-width:540px){
+    @content;
+  }
+}
+@mixin handheld{
+  @media screen and (max-width:820px){
+    @content;
+  }
+}
+@mixin max-handheld{
+  @media screen and (max-width:1025px){
+    @content;
+  }
+}
+@mixin only-tablet{
+  @media screen and (min-width:541px) and (max-width:820px){
+    @content;
+  }
+
+}
+
+@mixin small-display{
+  @media screen and (min-width:1026px) and (max-width:1200px){
+    @content;
+  }
+
+}
